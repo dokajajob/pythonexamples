@@ -4,5 +4,5 @@ def st(s):
     else:
         return 'Is' + s
 
-print(st('test'))
+print(st('test', one, two))
 print(st('Israel'))
