@@ -1,4 +1,4 @@
-"""aaa prints current time"""
+"""aaa prints current timeeeeee"""
 
 import datetime
 now = datetime.datetime.now()
