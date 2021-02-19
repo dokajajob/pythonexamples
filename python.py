@@ -224,3 +224,16 @@ values = bytearray(nums)
 for x in values: print(x)
 print()
 
+24) program to format a specified string to limit the number of characters to 6.
+
+str_num = "1234567890"
+print()
+print('%.6s' % str_num)
+print()
+
+25) display a floating number in specified numbers.
+
+order_amt = 212.374
+print('\nThe total order amount comes to %f' % order_amt)
+print('The total order amount comes to %.2f' % order_amt)
+print()
