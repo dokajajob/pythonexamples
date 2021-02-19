@@ -257,3 +257,69 @@ int_val = 30
 if int_val.bit_length() <= 63:
     print((-2 ** 63).bit_length())
     print((2 ** 63).bit_length())
+
+29)  whether lowercase letters exist in a string.
+
+str1 = 'A8238i823acdeOUEI'
+print(any(c.islower() for c in str1))
+
+30)  program to add trailing and leading zeroes to a string.
+
+str1='122.22'
+print("Original String: ",str1)
+print("\nAdded trailing zeros:")
+str1 = str1.ljust(8, '0')
+print(str1)
+str1 = str1.ljust(10, '0')
+print(str1)
+print("\nAdded leading zeros:")
+str1='122.22'
+str1 = str1.rjust(8, '0')
+print(str1)
+str1 = str1.rjust(10, '0')
+print(str1)
+
+31) program to use double quotes to display strings.
+
+import json
+print(json.dumps({'Alex': 1, 'Suresh': 2, 'Agnessa': 3}))
+
+32) split a variable length string into variables.
+
+var_list = ['a', 'b', 'c']
+x, y, z = (var_list + [None] * 3)[:3]
+print(x, y, z)
+var_list = [100, 20.25]
+x, y = (var_list + [None] * 2)[:2]
+print(x, y)
+
+33) program to calculate the time runs (difference between start and current time)of a program.
+
+from timeit import default_timer
+def timer(n):
+    start = default_timer()
+    # some code here
+    for row in range(0,n):
+        print(row)
+    print(default_timer() - start)
+
+timer(5)
+timer(15)
+
+34) Write a Python program to input two integers in a single line.
+
+print("Input the value of x & y")
+x, y = map(int, input().split())
+print("The value of x & y are: ",x,y)
+
+35) Write a Python program to find files and skip directories of a given directory.
+
+import os
+print([f for f in os.listdir('/home/students') if os.path.isfile(os.path.join('/home/students', f))])
+
+36) Write a Python program to extract single key-value pair of a dictionary in variables.
+
+d = {'Red': 'Green'}
+(c1, c2), = d.items()
+print(c1)
+print(c2)
