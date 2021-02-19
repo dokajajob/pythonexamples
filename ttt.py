@@ -1,3 +1,12 @@
-import os
-print([f for f in os.listdir('/home/dokaja/ed/html_css_js_tutorial')])
-print([f for f in os.listdir('/home/dokaja/ed/html_css_js_tutorial') if os.path.isfile(os.path.join('/home/dokaja/ed/html_css_js_tutorial', f))])
+
+ def max_min(data):
+  l = data[0]
+  s = data[0]
+  for num in data:
+    if num> l:
+      l = num
+    elif num< s:
+        s = num
+  return l, s
+
+print(max_min([0, 10, 15, 40, -5, -10, 42, 17, 28, 75]))
