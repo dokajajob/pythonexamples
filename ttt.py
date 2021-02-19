@@ -1,5 +1,4 @@
-
- def max_min(data):
+def max_min(data):
   l = data[0]
   s = data[0]
   for num in data:
