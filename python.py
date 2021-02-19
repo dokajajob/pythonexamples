@@ -323,3 +323,142 @@ d = {'Red': 'Green'}
 (c1, c2), = d.items()
 print(c1)
 print(c2)
+
+37) Write a Python program to convert true to 1 and false to 0.
+
+
+x = 'true'
+x = int(x == 'true')
+print(x)
+x = 'abcd'
+x = int(x == 'true')
+print(x)
+
+38) Write a Python program to valid an IP address.
+
+import socket
+addr = '127.0.0.2561'
+try:
+    socket.inet_aton(addr)
+    print("Valid IP")
+except socket.error:
+    print("Invalid IP")
+	
+39) Write a Python program to convert an integer to binary keep leading zeros.
+
+x = 12
+print(format(x, '08b'))
+print(format(x, '010b'))
+
+40) Write a python program to convert decimal to hexadecimal.
+
+x = 30
+print(format(x, '02x'))
+x = 4
+print(format(x, '02x'))
+
+41) Write a Python program to find the operating system name, platform and platform release date.
+
+import os, platform
+print("Operating system name:")
+print(os.name)
+print("Platform name:")
+print(platform.system())
+print("Platform release:")
+print(platform.release())
+
+42) Write a Python program to determine if the python shell is executing in 32bit or 64bit mode on operating system.
+
+import struct
+print(struct.calcsize("P") * 8)
+
+43) Write a Python program to check whether a variable is integer or string.
+
+print(isinstance(25,int) or isinstance(25,str))
+print(isinstance([25],int) or isinstance([25],str))
+print(isinstance("25",int) or isinstance("25",str))
+
+
+44) Write a Python program to test if a variable is a list or tuple or a set.
+
+#x = ['a', 'b', 'c', 'd']
+#x = {'a', 'b', 'c', 'd'}
+x = ('tuple', False, 3.2, 1)
+if type(x) is list:
+    print('x is a list')
+elif type(x) is set:
+    print('x is a set')
+elif type(x) is tuple:
+    print('x is a tuple')    
+else:
+    print('Neither a list or a set or a tuple.')
+45) Write a Python program to find the location of Python module sources.
+
+import sys
+print("\nList of directories in sys module:")
+print(sys.path)
+print("\nList of directories in os module:")
+import os
+print(os.path)
+
+46) Write a Python function to check whether a number is divisible by another number. Accept two integers values form the user.
+
+def multiple(m, n):
+	return True if m % n == 0 else False
+
+print(multiple(20, 5))
+print(multiple(7, 2))
+
+47) Write a Python function to find the maximum and minimum numbers from a sequence of numbers.
+ 
+ def max_min(data):
+  l = data[0]
+  s = data[0]
+  for num in data:
+    if num> l:
+      l = num
+    elif num< s:
+        s = num
+  return l, s
+
+print(max_min([0, 10, 15, 40, -5, 42, 17, 28, 75]))
+
+48) Write a Python function that takes a positive integer and returns the sum of the cube of all the positive integers smaller than the specified number.
+
+def sum_of_cubes(n):
+  n -= 1
+  total = 0
+  while n > 0:
+    total += n * n * n
+    n -= 1
+  return total
+print("Sum of cubes: ",sum_of_cubes(3))
+
+49) Write a Python function to find a distinct pair of numbers whose product is odd from a sequence of integer values.
+
+def odd_product(nums):
+  for i in range(len(nums)):
+    for j in range(len(nums)):
+      if  i != j:
+        product = nums[i] * nums[j]
+        if product & 1:
+          return True
+          return False
+          
+dt1 = [2, 4, 6, 8]
+dt2 = [1, 6, 4, 7, 8]
+print(dt1, odd_product(dt1));
+print(dt2, odd_product(dt2));
+
+product & 1 means check whether product is odd, because the last digit of binary representation of an odd number always is 1 while for an even number is 0.
+
+Here's how to calculate 5 & 9:
+
+1) transform 5 to binary representation (5)10 = (101)2
+
+2) transform 9 to binary representation (9)10 = (1001)2
+
+3) for every binary digit, & with two 1 is 1 otherwise 0. 
+
+
+
