@@ -467,7 +467,7 @@ The reverse() method reverses the elements of the list.
 
 
 
-ADS VIA CARBON
+
 The syntax of the reverse() method is:
 
 list.reverse()
