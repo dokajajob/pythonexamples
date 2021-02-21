@@ -1,4 +1,5 @@
 def myfunc(n,a):
   return lambda a : a * n
 
-mydoubler = print(myfunc(2,3))
+mydoubler = myfunc(2,3)
+print(mydoubler)
