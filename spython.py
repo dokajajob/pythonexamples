@@ -682,7 +682,6 @@ Updated List: [{1, 2}, (3, 4), [5, 6, 7]]
 54) Python List reverse()
 The reverse() method reverses the elements of the list.
 
-ads via Carbon
 No code required, set up in minutes! Flatfile Concierge turns data onboarding into a collaborative experience.
 ADS VIA CARBON
 The syntax of the reverse() method is:
