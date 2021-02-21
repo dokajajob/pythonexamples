@@ -1,12 +1,6 @@
-a_file = open("python.py", "r")
+f = open(/home/dokaja/ed/pythonexamples/python.py, "r")
+output = open(/home/dokaja/ed/pythonexamples/python_last.py, "w")
 
-lines = a_file.readlines()
-a_file.close()
-
-new_file = open("spython.py", "w")
-for line in lines:
-    if line.strip("\n") != "ads via Carbon":
-
-        new_file.write(line)
-
-new_file.close()
+output.write(f.read().replace("ds via Carbon","").replace("No code required, set up in minutes! Flatfile Concierge turns data onboarding into a collaborative experience.","").replace("ADS VIA CARBON"))
+f.close()
+output.close()
