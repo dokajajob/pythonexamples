@@ -462,3 +462,63 @@ Here's how to calculate 5 & 9:
 
 
 
+50) Python List reverse()
+The reverse() method reverses the elements of the list.
+
+ads via Carbon
+No code required, set up in minutes! Flatfile Concierge turns data onboarding into a collaborative experience.
+ADS VIA CARBON
+The syntax of the reverse() method is:
+
+list.reverse()
+reverse() parameter
+The reverse() method doesn't take any arguments.
+
+Return Value from reverse()
+The reverse() method doesn't return any value. It updates the existing list.
+
+Example 1: Reverse a List
+# Operating System List
+systems = ['Windows', 'macOS', 'Linux']
+print('Original List:', systems)
+
+# List Reverse
+systems.reverse()
+
+# updated list
+print('Updated List:', systems)
+Output
+
+Original List: ['Windows', 'macOS', 'Linux']
+Updated List: ['Linux', 'macOS', 'Windows']
+There are other several ways to reverse a list.
+
+Example 2: Reverse a List Using Slicing Operator
+# Operating System List
+systems = ['Windows', 'macOS', 'Linux']
+print('Original List:', systems)
+
+# Reversing a list  
+#Syntax: reversed_list = systems[start:stop:step] 
+reversed_list = systems[::-1]
+
+# updated list
+print('Updated List:', reversed_list)
+Output
+
+Original List: ['Windows', 'macOS', 'Linux']
+Updated List: ['Linux', 'macOS', 'Windows']
+Example 3: Accessing Elements in Reversed Order
+If you need to access individual elements of a list in the reverse order, it's better to use reversed() function.
+
+# Operating System List
+systems = ['Windows', 'macOS', 'Linux']
+
+# Printing Elements in Reversed Order
+for o in reversed(systems):
+    print(o)
+Output
+
+Linux
+macOS
+Windows
