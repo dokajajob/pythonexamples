@@ -465,8 +465,8 @@ Here's how to calculate 5 & 9:
 50) Python List reverse()
 The reverse() method reverses the elements of the list.
 
-a
-No code required, set up in minutes! Flatfile Concierge turns data onboarding into a collaborative experience.
+
+
 ADS VIA CARBON
 The syntax of the reverse() method is:
 
