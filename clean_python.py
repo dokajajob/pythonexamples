@@ -5,7 +5,7 @@ a_file.close()
 
 new_file = open("spython.py", "w")
 for line in lines:
-    if line.strip("\n") != "ads via Carbon No code required, set up in minutes! Flatfile Concierge turns data onboarding into a collaborative experience. ADS VIA CARBON":
+    if line.strip("\n") != "ads via Carbon":
 
         new_file.write(line)
 
