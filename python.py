@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 statistics
   import cProfile
   def sum(): print(1+2)
@@ -2238,3 +2239,5 @@ person =  {'name': 'Phill', 'age': 22}
 Note: The popitem() method raises a KeyError error if the dictionary is empty.
 
 aaaaa
+=======
+>>>>>>> d7d5a84feba5209699a443338c747b96ad454c45
