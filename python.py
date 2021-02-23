@@ -2265,3 +2265,10 @@ Bitwise OR  p1 | p2 p1.__or__(p2)
 Bitwise XOR p1 ^ p2 p1.__xor__(p2)
 Bitwise NOT ~p1 p1.__invert__()
 
+Operator  Expression  Internally
+Less than p1 < p2 p1.__lt__(p2)
+Less than or equal to p1 <= p2  p1.__le__(p2)
+Equal to  p1 == p2  p1.__eq__(p2)
+Not equal to  p1 != p2  p1.__ne__(p2)
+Greater than  p1 > p2 p1.__gt__(p2)
+Greater than or equal to  p1 >= p2  p1.__ge__(p2)
