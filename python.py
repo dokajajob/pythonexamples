@@ -2272,3 +2272,45 @@ Equal to  p1 == p2  p1.__eq__(p2)
 Not equal to  p1 != p2  p1.__ne__(p2)
 Greater than  p1 > p2 p1.__gt__(p2)
 Greater than or equal to  p1 >= p2  p1.__ge__(p2)
+
+84) Python function that takes a sequence of numbers and determines whether all the numbers are different from each other
+
+def test_distinct(data):
+  if len(data) == len(set(data)):
+    return True
+  else:
+    return False;
+print(test_distinct([1,5,7,9]))
+print(test_distinct([2,4,5,5,7,9]))
+
+85)  Python program to create all possible strings by using 'a', 'e', 'i', 'o', 'u'. Use the characters exactly once.
+
+import random
+char_list = ['a','e','i','o','u']
+random.shuffle(char_list)
+print(''.join(char_list))
+
+86) Python program to remove and print every third number from a list of numbers until the list becomes empty.
+
+def remove_nums(int_list):
+  #list starts with 0 index
+  position = 3 - 1 
+  idx = 0
+  len_list = (len(int_list))
+  while len_list>0:
+    idx = (position+idx)%len_list
+    print(int_list.pop(idx))
+    len_list -= 1
+nums = [10,20,30,40,50,60,70,80,90]
+remove_nums(nums)
+
+87) Write a Python program to count the number of each character of a given text of a text file.
+
+import collections
+import pprint
+file_input = input('File Name: ')
+with open(file_input, 'r') as info:
+  count = collections.Counter(info.read().upper())
+  value = pprint.pformat(count)
+print(value)
+
