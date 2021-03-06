@@ -2314,3 +2314,113 @@ with open(file_input, 'r') as info:
   value = pprint.pformat(count)
 print(value)
 
+88) Python program to get the top stories from Google news
+
+import bs4
+from bs4 import BeautifulSoup as soup
+from urllib.request import urlopen
+
+news_url="https://news.google.com/news/rss"
+Client=urlopen(news_url)
+xml_page=Client.read()
+Client.close()
+
+soup_page=soup(xml_page,"xml")
+news_list=soup_page.findAll("item")
+# Print news title, url and publish date
+for news in news_list:
+  print(news.title.text)
+  print(news.link.text)
+  print(news.pubDate.text)
+  print("-"*60)
+
+  88) Python program to get a list of locally installed Python modules.
+
+import pkg_resources
+installed_packages = pkg_resources.working_set
+installed_packages_list = sorted(["%s==%s" % (i.key, i.version)
+     for i in installed_packages])
+for m in installed_packages_list:
+    print(m)
+
+    89) Python program to display some information about the OS where the script is running.
+
+import platform as pl
+
+os_profile = [
+        'architecture',
+        'linux_distribution',
+        'mac_ver',
+        'machine',
+        'node',
+        'platform',
+        'processor',
+        'python_build',
+        'python_compiler',
+        'python_version',
+        'release',
+        'system',
+        'uname',
+        'version',
+    ]
+for key in os_profile:
+  if hasattr(pl, key):
+    print(key +  ": " + str(getattr(pl, key)()))
+
+    90) Python program to create a SQLite database and connect with the database and print the version of the SQLite database.
+
+import sqlite3
+try:
+   sqlite_Connection = sqlite3.connect('temp.db')
+   conn = sqlite_Connection.cursor()
+   print("\nDatabase created and connected to SQLite.")
+   sqlite_select_Query = "select sqlite_version();"
+   conn.execute(sqlite_select_Query)
+   record = conn.fetchall()
+   print("\nSQLite Database Version is: ", record)
+   conn.close()
+except sqlite3.Error as error:
+   print("\nError while connecting to sqlite", error)
+finally:
+   if (sqlite_Connection):
+       sqlite_Connection.close()
+       print("\nThe SQLite connection is closed.")
+
+       91) Python program to create a table and insert some records in that table. Finally selects all rows from the table and display the records.
+
+import sqlite3
+ 
+from sqlite3 import Error
+ 
+def sql_connection():
+   try:
+     conn = sqlite3.connect('mydatabase.db')
+     return conn
+   except Error:
+     print(Error)
+ 
+def sql_table(conn):
+   cursorObj = conn.cursor()
+# Create the table
+   cursorObj.execute("CREATE TABLE salesman(salesman_id n(5), name char(30), city char(35), commission decimal(7,2));")
+# Insert records
+   cursorObj.executescript("""
+   INSERT INTO salesman VALUES(5001,'James Hoog', 'New York', 0.15);
+   INSERT INTO salesman VALUES(5002,'Nail Knite', 'Paris', 0.25);
+   INSERT INTO salesman VALUES(5003,'Pit Alex', 'London', 0.15);
+   INSERT INTO salesman VALUES(5004,'Mc Lyon', 'Paris', 0.35);
+   INSERT INTO salesman VALUES(5005,'Paul Adam', 'Rome', 0.45);
+   """)
+   conn.commit()
+   cursorObj.execute("SELECT * FROM salesman")
+   rows = cursorObj.fetchall()
+   print("Agent details:")
+   for row in rows:
+       print(row)
+sqllite_conn = sql_connection()
+sql_table(sqllite_conn)
+if (sqllite_conn):
+ sqllite_conn.close()
+ print("\nThe SQLite connection is closed.")
+
+
